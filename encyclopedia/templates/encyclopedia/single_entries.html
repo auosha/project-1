@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+<button style="border:none;background:#5555ff">
+    <a href="{% url 'wiki:edit-entries' title %}" style="color:#fff" >
+        Edit
+    </a>
+</button>
+
+<p>{{content |safe }}</p>
+
+{% endblock %}
+

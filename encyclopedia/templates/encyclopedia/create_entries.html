@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+   Create New entry
+{% endblock %}
+
+{% block body %}
+<form action="{%url 'wiki:create-entries' %}" method="POST" style="wedith=100px;height=100px">
+   {% csrf_token %}
+   {{form.as_p}}
+   <button type="submit" style="border:none;background:#5555ff;color:#fff" >submit</button>
+</form>
+
+{% endblock %}}
+
